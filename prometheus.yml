@@ -17,13 +17,13 @@ scrape_configs:
     static_configs:
         - targets:
             - https://github.com
-            - https://google.com
-            - https://hackerrank.com
+            - http://13.202.211.253:5000
+            - http://13.202.211.253:3000
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: 192.168.198.131:9115  # The blackbox exporter's real hostname:port.
+        replacement: http://127.0.0.1:9115  # The blackbox exporter's real hostname:port.
 
