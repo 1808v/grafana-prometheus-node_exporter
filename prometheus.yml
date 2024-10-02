@@ -18,7 +18,7 @@ scrape_configs:
         - targets:
             - https://github.com
             - http://13.202.211.253:8080
-            - http://13.202.211.253:3000
+            - http://13.202.211.253:4000
     relabel_configs:
       - source_labels: [__address__]
         target_label: __param_target
